@@ -26,5 +26,7 @@ A beta version of Skided selfbot
 Open **Install.bat**
 
 ## Previews
+
+
 ![Preview1](https://ignacio.wheres-my-ta.co/I6X2T0.png)
 ![Preview2](https://ignacio.wheres-my-ta.co/l5Yb3i.png)
