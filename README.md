@@ -14,7 +14,7 @@ A beta version of Skided selfbot
 - Giveaway sniper
 - Slotbot sniper
 - Image search
-- image manipulation
+- Image manipulation
 - Massreact
 - Copy-cat
 - TokenGrabber Removed
@@ -22,7 +22,7 @@ A beta version of Skided selfbot
 ```
 
 ## Installation
-**Clone the source or ![Download the repo](https://github.com/7lq/exeter-selfbot/archive/master.zip)**
+**Clone the source or [Download the repo](https://github.com/7lq/exeter-selfbot/archive/master.zip)**
 Open **Install.bat**
 
 ## Previews
