@@ -342,6 +342,7 @@ async def on_message(message):
 @Exeter.event
 async def on_connect():
     Clear()
+    startprint()
     
 @Exeter.event
 async def on_member_ban(guild: discord.Guild, user: discord.user):
